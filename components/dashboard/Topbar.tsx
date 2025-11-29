@@ -17,7 +17,7 @@ const Topbar = () => {
       </div>
 
       <div className="flex   items-center gap-2.5">
-        <div className="w-8 h-8 lg:w-12 lg:h-12 rounded-full bg-[#00b7c8] flex items-center justify-center">
+        <div className="w-8 h-8 lg:w-12 lg:h-12 rounded-full text-white bg-blue-600 flex items-center justify-center">
           <IoMdNotificationsOutline className="text-[14px] lg:text-[24px]" />
         </div>
 

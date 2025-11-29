@@ -50,10 +50,10 @@ const FormInput: React.FC<FormInputProps> = ({
             type={type}
             id={name}
             {...register(name, { required: `${label} is required`, ...rules })}
-            className={`py-5 px-12 h-[45px] md:h-[64px] focus:outline-light-blue rounded-[36px] w-full ${
+            className={`py-5 px-12 h-[45px] md:h-[64px] focus:outline-blue-300 rounded-[36px] w-full ${
               "/" + pathname.split("/")[1] === "/settings"
-                ? "bg-[#0e0e10] placeholder:text-[#909090]"
-                : "bg-[#141624] placeholder:text-gray"
+                ? "bg-gray-300 placeholder:text-[#909090]"
+                : "bg-gray-300 placeholder:text-[#909090]"
             } focus:outline disabled:bg-[#272727] disabled:cursor-not-allowed`}
             placeholder={placeholder}
             disabled={disabled}
