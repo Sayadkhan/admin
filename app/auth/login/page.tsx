@@ -37,9 +37,9 @@ const Page: React.FC = () => {
   };
 
   return (
-    <div className=" ![background-image:var(--bg-primary-linear)] w-full min-h-screen text-white flex items-center justify-center px-3 md:px-0">
-      <div className="w-full max-w-[700px] h-auto rounded-3xl p-[1px] [background:var(--bg-border-linear)]">
-        <div className="w-full h-full flex flex-col items-center rounded-3xl [background:var(--bg-secondary-linear)] py-[15px] md:py-[30px] px-[20px] md:px-[90px]">
+    <div className="  w-full min-h-screen text-black flex items-center justify-center px-3 md:px-0">
+      <div className="w-full max-w-[700px] h-auto rounded-3xl p-[1px] ">
+        <div className="w-full h-full flex flex-col items-center rounded-3xl border border-gray-200 py-[15px] md:py-[30px] px-[20px] md:px-[90px]">
           {/* Title */}
           <div className="flex flex-col items-center">
             <h3 className="text-2xl md:text-4xl mt-2 md:mt-5">Welcome back!</h3>
@@ -79,12 +79,12 @@ const Page: React.FC = () => {
                     type="checkbox"
                     id="checkbox-1"
                     {...methods.register("rememberMe", { required: true })}
-                    className="peer relative appearance-none w-[16px] h-[16px] md:w-[20px] md:h-[20px] border border-light-blue rounded-[6px]"
+                    className="peer relative appearance-none w-[16px] h-[16px] md:w-[20px] md:h-[20px] border border-black/60 rounded-[6px]"
                   />
-                  <span className="absolute left-[4px] text-light-blue text-[10px] md:text-[14px] opacity-0 pointer-events-none peer-checked:opacity-100">
+                  <span className="absolute left-[4px] text-black text-[10px] md:text-[14px] opacity-0 pointer-events-none peer-checked:opacity-100">
                     <FaCheck />
                   </span>
-                  <span className="text-[14px] md:text-[16px] font-[400] text-[rgba(255,255,255,0.70)]">
+                  <span className="text-[14px] md:text-[16px] font-[400] text-black/60">
                     Remember me
                   </span>
                 </label>
@@ -110,26 +110,6 @@ const Page: React.FC = () => {
               />
             </form>
           </FormProvider>
-
-          {/* Google Button */}
-          <span className="mt-[18px] md:mt-[25px] text-[14px] md:text-base">
-            Or Continue with
-          </span>
-
-          <button className="bg-[#141624] shrink-0 cursor-pointer h-[50px] md:h-[64px] w-[175px] rounded-4xl text-2xl flex items-center justify-center mt-[24px]">
-            <FcGoogle />
-          </button>
-
-          {/* Bottom Link */}
-          <span className="mt-[18px] md:mt-[25px] text-[14px] md:text-base">
-            Don’t have an account?{" "}
-            <Link
-              className="text-light-blue hover:underline"
-              href={"/auth/register"}
-            >
-              Sign Up
-            </Link>
-          </span>
         </div>
       </div>
     </div>

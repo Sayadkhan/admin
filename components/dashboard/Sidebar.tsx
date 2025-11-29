@@ -16,7 +16,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const NavData = [
   {
     id: 1,
-    icon: <DashboardIcon />,
+
     title: "Dashboard",
     pathname: "/dashboard",
   },
@@ -24,7 +24,7 @@ const NavData = [
   // Banner Management
   {
     id: 2,
-    icon: <SummeryIcon />,
+
     title: "Banner Management",
     submenu: [
       { title: "Add New Banner", pathname: "/banner/add" },
@@ -39,7 +39,7 @@ const NavData = [
   // Club Management
   {
     id: 3,
-    icon: <AITrainingIcon />,
+
     title: "Club Management",
     submenu: [
       { title: "Add Club", pathname: "/clubs/add" },
@@ -63,7 +63,7 @@ const NavData = [
   // Accommodation
   {
     id: 4,
-    icon: <CallIcon />,
+
     title: "Accommodation",
     submenu: [
       { title: "Add Room Type", pathname: "/accommodation/add" },
@@ -78,7 +78,7 @@ const NavData = [
   // User Management
   {
     id: 5,
-    icon: <SettingsIcon />,
+
     title: "User Management",
     submenu: [
       { title: "All Users", pathname: "/users" },
@@ -92,7 +92,7 @@ const NavData = [
   // Premium Members
   {
     id: 6,
-    icon: <SummeryIcon />,
+
     title: "Premium Members",
     submenu: [
       { title: "All Members", pathname: "/premium" },
@@ -109,7 +109,7 @@ const NavData = [
   // Membership Forms
   {
     id: 7,
-    icon: <AITrainingIcon />,
+
     title: "Membership Forms",
     submenu: [
       { title: "View Submissions", pathname: "/forms" },
@@ -123,7 +123,7 @@ const NavData = [
   // Offers & Coupons
   {
     id: 8,
-    icon: <CallIcon />,
+
     title: "Offers & Coupons",
     submenu: [
       { title: "Create Offer", pathname: "/offers/create" },
@@ -147,7 +147,7 @@ const Sidebar = () => {
     <div
       className={` fixed ${
         collapsed ? "left-0" : "-left-[250px]"
-      } xl:static bg-[#0E0E10] border-r border-[#262626] py-8    transition-all z-50 duration-300`}
+      } xl:static bg-[#fff] border-r border-gray-300 py-8    transition-all z-50 duration-300`}
     >
       {/* Mobile Expand/Collapse Buttons */}
       {collapsed ? (
@@ -180,14 +180,11 @@ const Sidebar = () => {
               {/* Parent Button */}
               <button
                 onClick={() => (item.submenu ? toggleMenu(item.id) : null)}
-                className={`px-4 text-sm md:text-base py-4 flex items-center justify-between w-full bg-[#18181A] rounded-[8px] ${
-                  parentActive ? "border-l-[3px] border-light-blue" : ""
+                className={`px-4 text-sm md:text-base py-4 flex items-center justify-between  w-full bg-gray-200 rounded-[8px] ${
+                  parentActive ? "border-l-[3px] border-blue-500" : ""
                 }`}
               >
-                <span className="flex items-center gap-2">
-                  {item.icon}
-                  {item.title}
-                </span>
+                <span className="flex items-center gap-2">{item.title}</span>
 
                 {item.submenu && (
                   <FaChevronRight
@@ -207,8 +204,8 @@ const Sidebar = () => {
                       href={sub.pathname}
                       className={`py-2 px-3 text-sm rounded-md ${
                         pathname === sub.pathname
-                          ? "bg-light-blue text-black font-semibold"
-                          : "text-gray-300 hover:bg-[#2A2A2D]"
+                          ? "bg-blue-500 text-white font-semibold"
+                          : "text-black hover:bg-gray-200"
                       }`}
                     >
                       {sub.title}

@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function DashboardLayout({ children }) {
   return (
-    <div className="flex text-white ">
+    <div className="flex text-black ">
       <div className="relative">
         <Sidebar />
       </div>
