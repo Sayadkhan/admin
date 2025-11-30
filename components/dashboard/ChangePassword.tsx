@@ -19,13 +19,13 @@ const ChangePassword = () => {
   };
   return (
     <div className="flex flex-col mb-[38px]">
+      np
       <SectionTItle
         title={"Change Password"}
         description={
           "Update your password regularly to keep your account secure. "
         }
       />
-
       <div className="h-auto w-full rounded-[36px] border flex flex-col gap-5 border-[#272727] bg-[#191919] py-[40px] px-[20px]">
         <FormProvider {...methods}>
           <form
